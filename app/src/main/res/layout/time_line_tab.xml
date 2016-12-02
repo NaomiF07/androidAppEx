@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:text="Time Line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView2" />
+
+    <ImageView
+        android:layout_width="200px"
+        android:layout_height="200px"
+        app:srcCompat="@drawable/ikeman1"
+        android:id="@+id/imageMan1"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="44dp" />
+
+    <ImageView
+        android:layout_width="200px"
+        android:layout_height="200px"
+        app:srcCompat="@drawable/ikeman2"
+        android:layout_marginTop="87dp"
+        android:id="@+id/imageMan2"
+        android:layout_alignTop="@+id/imageMan1"
+        android:layout_toRightOf="@+id/imageMan1"
+        android:layout_toEndOf="@+id/imageMan1"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp" />
+
+    <ImageView
+        android:layout_width="200px"
+        android:layout_height="200px"
+        app:srcCompat="@drawable/ikeman3"
+        android:layout_below="@+id/imageMan2"
+        android:layout_alignLeft="@+id/imageMan1"
+        android:layout_alignStart="@+id/imageMan1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="13dp"
+        android:id="@+id/imageMan3" />
+
+    <ImageView
+        android:layout_width="300px"
+        android:layout_height="300px"
+        app:srcCompat="@drawable/ikeman4"
+        android:layout_marginTop="36dp"
+        android:id="@+id/imageMan4"
+        android:layout_alignTop="@+id/imageMan3"
+        android:layout_alignLeft="@+id/imageMan2"
+        android:layout_alignStart="@+id/imageMan2"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp" />
+
+</RelativeLayout>
