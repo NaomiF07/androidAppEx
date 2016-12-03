@@ -39,7 +39,7 @@ public class HomeView extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.home_tab, container, false);
 
-        mp = MediaPlayer.create(view.getContext(), R.raw.sound1);
+        mp = MediaPlayer.create(view.getContext(), R.raw.voice2);
 
         final ImageView imageOtoya = (ImageView) view.findViewById(R.id.imageOtoya);
         imageOtoya.setOnClickListener(new View.OnClickListener() {

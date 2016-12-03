@@ -13,14 +13,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
-import android.content.Context;
 
 import java.io.IOException;
 
 public class TimeLineView extends Fragment {
-    MediaPlayer mp = null;
+
+    MediaPlayer voice1 = null;
+    MediaPlayer voice2 = null;
+    MediaPlayer voice3 = null;
+    MediaPlayer voice4 = null;
 
 
     @Override
@@ -30,7 +32,10 @@ public class TimeLineView extends Fragment {
             Bundle saveInstanceState){
 
         View view = inflater.inflate(R.layout.time_line_tab, container, false);
-        mp = MediaPlayer.create(view.getContext(), R.raw.sound1);
+        voice1 = MediaPlayer.create(view.getContext(), R.raw.voice1);
+        voice2 = MediaPlayer.create(view.getContext(), R.raw.voice2);
+        voice3 = MediaPlayer.create(view.getContext(), R.raw.voice3);
+        voice4 = MediaPlayer.create(view.getContext(), R.raw.voice1);
 
         /*
         * イケメン1
@@ -42,20 +47,18 @@ public class TimeLineView extends Fragment {
                 Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.touch);
                 imageMan1.startAnimation(animation);
 
-
-                if(mp.isPlaying()){
-                    mp.stop();
+                if(voice1.isPlaying()){
+                    voice1.stop();
                     try{
-                        mp.prepare();
+                        voice1.prepare();
                     }catch (IOException e)
                     {
                         e.printStackTrace();
                     }
                 }
                 else{
-                    mp.start();
+                    voice1.start();
                 }
-
             }
         });
 
@@ -69,6 +72,19 @@ public class TimeLineView extends Fragment {
             public void onClick(View v) {
                 Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.touch);
                 imageMan2.startAnimation(animation);
+
+                if(voice2.isPlaying()){
+                    voice2.stop();
+                    try{
+                        voice2.prepare();
+                    }catch (IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+                else{
+                    voice2.start();
+                }
             }
         });
 
@@ -82,6 +98,20 @@ public class TimeLineView extends Fragment {
             public void onClick(View v) {
                 Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.touch);
                 imageMan3.startAnimation(animation);
+
+                if(voice3.isPlaying()){
+                    voice3.stop();
+                    try{
+                        voice3.prepare();
+                    }catch (IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+                else{
+                    voice3.start();
+                }
+
             }
         });
 
@@ -95,6 +125,19 @@ public class TimeLineView extends Fragment {
             public void onClick(View v) {
                 Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.touch);
                 imageMan4.startAnimation(animation);
+
+                if(voice4.isPlaying()){
+                    voice4.stop();
+                    try{
+                        voice4.prepare();
+                    }catch (IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+                else{
+                    voice4.start();
+                }
             }
         });
 

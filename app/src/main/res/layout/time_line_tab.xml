@@ -8,18 +8,8 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:background="@drawable/back_ground">
 
-    <TextView
-        android:text="Time Line"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/textView2" />
-
     <ImageView
-        android:layout_width="200px"
-        android:layout_height="200px"
+        android:layout_width="300px"
         app:srcCompat="@drawable/ikeman1"
         android:id="@+id/imageMan1"
         android:layout_below="@+id/textView2"
@@ -27,7 +17,8 @@
         android:layout_alignParentStart="true"
         android:layout_marginLeft="21dp"
         android:layout_marginStart="21dp"
-        android:layout_marginTop="44dp" />
+        android:layout_marginTop="44dp"
+        android:layout_height="300px" />
 
     <ImageView
         android:layout_width="200px"
@@ -45,24 +36,67 @@
         android:layout_width="200px"
         android:layout_height="200px"
         app:srcCompat="@drawable/ikeman3"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="37dp"
+        android:id="@+id/imageMan3"
         android:layout_below="@+id/imageMan2"
         android:layout_alignLeft="@+id/imageMan1"
-        android:layout_alignStart="@+id/imageMan1"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="13dp"
-        android:id="@+id/imageMan3" />
+        android:layout_alignStart="@+id/imageMan1" />
+
+    <TextView
+        android:text="\@funo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textSize="20sp"
+        android:layout_alignBottom="@+id/imageMan2"
+        android:layout_alignRight="@+id/imageMan3"
+        android:layout_alignEnd="@+id/imageMan3"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:text="\@morita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageMan2"
+        android:layout_alignRight="@+id/imageMan2"
+        android:layout_alignEnd="@+id/imageMan2"
+        android:layout_marginRight="11dp"
+        android:layout_marginEnd="11dp"
+        android:id="@+id/textView11"
+        android:textSize="20sp" />
+
+    <TextView
+        android:text="\@yoshioka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView12"
+        android:textSize="20sp"
+        android:layout_below="@+id/imageMan3"
+        android:layout_alignRight="@+id/imageMan3"
+        android:layout_alignEnd="@+id/imageMan3" />
+
+    <TextView
+        android:text="\@itoyama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageMan4"
+        android:layout_alignRight="@+id/textView11"
+        android:layout_alignEnd="@+id/textView11"
+        android:id="@+id/textView13"
+        android:textSize="20sp" />
 
     <ImageView
-        android:layout_width="300px"
-        android:layout_height="300px"
+        android:layout_width="400px"
         app:srcCompat="@drawable/ikeman4"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="23dp"
         android:id="@+id/imageMan4"
+        android:layout_height="400px"
         android:layout_alignTop="@+id/imageMan3"
-        android:layout_alignLeft="@+id/imageMan2"
-        android:layout_alignStart="@+id/imageMan2"
-        android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp" />
+        android:layout_toRightOf="@+id/imageMan3"
+        android:layout_toEndOf="@+id/imageMan3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp" />
 
 </RelativeLayout>
