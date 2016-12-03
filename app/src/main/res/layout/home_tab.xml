@@ -11,23 +11,6 @@
         android:layout_height="wrap_content"
         android:text="HOME"/>
 
-    <SeekBar
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/seekBarGrowUp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/draemon1"
-        android:id="@+id/imageDraemon"
-        android:layout_marginBottom="34dp"
-        android:layout_above="@+id/seekBarGrowUp"
-        android:layout_centerHorizontal="true" />
-
     <Button
         android:text="Shop"
         android:layout_width="wrap_content"
@@ -39,5 +22,14 @@
         android:layout_marginEnd="11dp"
         android:layout_marginBottom="16dp"
         android:id="@+id/button_shop" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/otoya"
+        android:id="@+id/imageOtoya"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
