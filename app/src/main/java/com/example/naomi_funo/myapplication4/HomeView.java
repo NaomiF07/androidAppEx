@@ -66,17 +66,18 @@ public class HomeView extends Fragment {
         });
 
 
-        // Shopボタン
-        button_shop =(Button)view.findViewById(R.id.button_shop);
-        button_shop.setOnClickListener(new View.OnClickListener() {
+        final ImageView cart = (ImageView) view.findViewById(R.id.cart);
+        cart.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                if (view == button_shop) {
-                    Intent intent = new Intent(view.getContext(), ShopView.class);
-                    startActivityForResult(intent, 0);
-                }
+            public void onClick(View v) {
+                Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.touch2);
+                cart.startAnimation(animation);
+                Intent intent = new Intent(v.getContext(), ShopView.class);
+                startActivityForResult(intent, 0);
             }
+
         });
+
 
 
 
