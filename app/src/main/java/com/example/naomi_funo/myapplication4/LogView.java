@@ -46,6 +46,8 @@ public class LogView extends Fragment {
         super.onCreate(saveInstanceState);
         mlineChart = (LineChart) view.findViewById(R.id.line_chart);
         setData();
+        mlineChart.setDrawGridBackground(true);
+        mlineChart.setGridBackgroundColor(Color.rgb(234, 245, 67));
 
         return view;
     }
@@ -87,7 +89,6 @@ public class LogView extends Fragment {
 //        LineData data = new LineData(xVals, dataSets);
         LineDataSet dataSet = new LineDataSet(yVals, "# of Calls");
         LineData lineData = new LineData(dataSet);
-
 
         // set data
         mlineChart.setData(lineData);
