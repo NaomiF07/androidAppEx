@@ -40,8 +40,22 @@ public class HomeView extends Fragment {
         View view = inflater.inflate(R.layout.home_tab, container, false);
 
         mp = MediaPlayer.create(view.getContext(), R.raw.voice2);
+        if(mp.isPlaying()){
+            mp.stop();
+            try{
+                mp.prepare();
+            }catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
+        else{
+            mp.start();
+        }
 
         final ImageView imageOtoya = (ImageView) view.findViewById(R.id.imageOtoya);
+
+        // おとやクリック時の挙動
         imageOtoya.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
