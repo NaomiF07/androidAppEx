@@ -5,21 +5,41 @@ package com.example.naomi_funo.myapplication4;
  */
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 
 public class HomeView extends Fragment {
 
+    private Button button_shop;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.home_tab, container, false);
+
+        // Shopボタン
+        button_shop =(Button)view.findViewById(R.id.button_shop);
+        button_shop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view == button_shop) {
+                    Intent intent = new Intent(view.getContext(), ShopView.class);
+                    startActivityForResult(intent, 0);
+                }
+            }
+        });
+
+
+
 
         // ドラえもん歩く用
         final ImageView draemonImg = (ImageView)view.findViewById(R.id.imageDraemon);
