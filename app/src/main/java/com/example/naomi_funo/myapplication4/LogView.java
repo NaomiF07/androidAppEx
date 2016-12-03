@@ -11,11 +11,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class LogView extends Fragment {
+    //グローバル変数
+    Globals globals;
 
-    private Button button_mokuhyo;
-
+    private Button button;
 
     @Override
     public View onCreateView(
@@ -24,17 +26,22 @@ public class LogView extends Fragment {
             Bundle saveInstanceState){
 
         View view = inflater.inflate(R.layout.log_tab, container, false);
-        button_mokuhyo =(Button)view.findViewById(R.id.button_mokuhyo);
-        button_mokuhyo.setOnClickListener(new View.OnClickListener() {
+        button =(Button)view.findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (view == button_mokuhyo) {
+                if (view == button) {
                     Intent intent = new Intent(view.getContext(), MokuhyoView.class);
                     startActivityForResult(intent, 0);
                 }
             }
         });
-
+        globals = (Globals) this.getActivity().getApplication();
+        globals.GlobalsAllInit();
+        int mokuhyotime = globals.mokuhyotime;
+        String set_text = "目標　" + mokuhyotime + "分/日";
+        button.setText(set_text);
         return view;
     }
+
 }
