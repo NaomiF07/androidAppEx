@@ -96,7 +96,7 @@ public class LogView extends Fragment {
 //
 //        // create a data object with the datasets
 //        LineData data = new LineData(xVals, dataSets);
-        LineDataSet dataSet = new LineDataSet(yVals, "# of Calls");
+        LineDataSet dataSet = new LineDataSet(yVals, "歩数");
         LineData lineData = new LineData(dataSet);
 
         // set data
