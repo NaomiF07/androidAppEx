@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
@@ -17,21 +18,53 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
+
+import java.io.IOException;
 
 import static android.support.v7.app.AlertDialog.*;
 
 public class HomeView extends Fragment {
 
     private Button button_shop;
+    MediaPlayer mp = null;
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.home_tab, container, false);
+
+        mp = MediaPlayer.create(view.getContext(), R.raw.sound1);
+
+        final ImageView imageOtoya = (ImageView) view.findViewById(R.id.imageOtoya);
+        imageOtoya.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.touch2);
+                imageOtoya.startAnimation(animation);
+
+
+                if(mp.isPlaying()){
+                    mp.stop();
+                    try{
+                        mp.prepare();
+                    }catch (IOException e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+                else{
+                    mp.start();
+                }
+
+            }
+        });
+
 
         // Shopボタン
         button_shop =(Button)view.findViewById(R.id.button_shop);
