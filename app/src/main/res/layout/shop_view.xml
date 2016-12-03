@@ -6,8 +6,8 @@
     android:background="@drawable/back_ground">
 
     <TextView
-        android:text="SHOP"
-        android:layout_width="match_parent"
+        android:text="       52"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="200px"
         android:id="@+id/textView3" />
@@ -27,15 +27,15 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="200px"
-                    android:layout_height="200px"
+                    android:layout_width="118dp"
+                    android:layout_height="wrap_content"
                     app:srcCompat="@drawable/icon"
                     android:id="@+id/imageView2313" />
 
                 <TextView
                     android:text="「今日もがんばったね」"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="276dp"
+                    android:layout_height="64dp"
                     android:textSize="50px"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:id="@+id/textView4" />
@@ -45,17 +45,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="1">
 
                 <ImageView
-                    android:layout_width="93dp"
-                    android:layout_height="85dp"
                     app:srcCompat="@drawable/ikeman1"
-                    android:id="@+id/imageView23" />
+                    android:id="@+id/imageView23"
+                    android:layout_weight="0.38"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp" />
 
                 <TextView
-                    android:text="TextView"
-                    android:layout_width="match_parent"
+                    android:text="Text1"
+                    android:layout_width="276dp"
                     android:layout_height="match_parent"
                     android:id="@+id/textView43" />
             </LinearLayout>
@@ -65,48 +67,51 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="86dp"
-                    android:layout_height="103dp"
+                    android:layout_width="80dp"
                     app:srcCompat="@drawable/ikeman1"
-                    android:id="@+id/imageView231" />
+                    android:id="@+id/imageView231"
+                    android:layout_height="80dp" />
 
                 <TextView
-                    android:text="TextView"
-                    android:layout_width="match_parent"
+                    android:text="text2"
+                    android:layout_width="276dp"
                     android:layout_height="match_parent"
                     android:id="@+id/textView431" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="1">
 
                 <ImageView
-                    android:layout_width="83dp"
-                    android:layout_height="93dp"
                     app:srcCompat="@drawable/ikeman1"
-                    android:id="@+id/imageView232" />
+                    android:id="@+id/imageView232"
+                    android:layout_height="80dp"
+                    android:layout_width="80dp" />
 
                 <TextView
-                    android:text="TextView"
-                    android:layout_width="match_parent"
+                    android:text="Text3"
+                    android:layout_width="276dp"
                     android:layout_height="match_parent"
                     android:id="@+id/textView432" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="1">
 
                 <ImageView
-                    android:layout_width="83dp"
-                    android:layout_height="93dp"
                     app:srcCompat="@drawable/ikeman1"
-                    android:id="@+id/imageView2322" />
+                    android:id="@+id/imageView2322"
+                    android:layout_weight="0.88"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp" />
 
                 <TextView
-                    android:text="TextView"
-                    android:layout_width="match_parent"
+                    android:text="Text4"
+                    android:layout_width="276dp"
                     android:layout_height="match_parent"
                     android:id="@+id/textView4322" />
             </LinearLayout>
