@@ -48,6 +48,18 @@
         android:layout_alignParentEnd="true" />
 
     <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/otoya"
+        android:id="@+id/imageOtoya"
+        android:layout_below="@+id/imageView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/cart"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:srcCompat="@drawable/cart"
@@ -55,15 +67,6 @@
         android:layout_below="@+id/textView7"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/otoya"
-        android:id="@+id/imageOtoya"
-        android:layout_below="@+id/imageView6"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>
