@@ -16,8 +16,6 @@ import android.widget.SeekBar;
 
 public class HomeView extends Fragment {
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
