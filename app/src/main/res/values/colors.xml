@@ -3,6 +3,6 @@
     <color name="colorPrimary">#009688</color>
     <color name="colorPrimaryDark">#00796B</color>
     <color name="colorAccent">#FFEB3B</color>
-    <color name="tab_background_selected">#FFA6D7</color>
+    <color name="tab_background_selected">#ffa6d7</color>
     <color name="tab_background_unselected">#FFF4FB</color>
 </resources>
