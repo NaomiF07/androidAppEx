@@ -5,12 +5,30 @@
     android:layout_height="match_parent"
     android:background="@drawable/back_ground">
 
-    <TextView
-        android:text="       52"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="200px"
-        android:id="@+id/textView3" />
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="82dp"
+            app:srcCompat="@drawable/coin"
+            android:id="@+id/imageView5"
+            android:layout_marginLeft="70dp"
+            />
+
+        <TextView
+            android:text="52"
+            android:layout_width="wrap_content"
+            android:layout_height="114dp"
+            android:textSize="200px"
+            android:id="@+id/textView3" />
+
+
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -26,20 +44,6 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="118dp"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/icon"
-                    android:id="@+id/imageView2313" />
-
-                <TextView
-                    android:text="「今日もがんばったね」"
-                    android:layout_width="276dp"
-                    android:layout_height="64dp"
-                    android:textSize="50px"
-                    android:layout_marginTop="@dimen/activity_vertical_margin"
-                    android:id="@+id/textView4" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -49,17 +53,24 @@
                 android:weightSum="1">
 
                 <ImageView
-                    app:srcCompat="@drawable/ikeman1"
+                    app:srcCompat="@drawable/play"
                     android:id="@+id/imageView23"
-                    android:layout_weight="0.38"
+                    android:layout_width="41dp"
+                    android:layout_height="80dp" />
+
+                <ImageView
+                    app:srcCompat="@drawable/otoyashikaku"
+                    android:id="@+id/imageView23"
                     android:layout_width="80dp"
                     android:layout_height="80dp" />
 
                 <TextView
-                    android:text="Text1"
-                    android:layout_width="276dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/textView43" />
+                    android:text="君の笑顔の理由になりたいって思うから…そばにいさせてほしいな。君が大好きだからさ。"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/textView43"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="center_vertical"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -67,16 +78,103 @@
                 android:orientation="horizontal">
 
                 <ImageView
+                    app:srcCompat="@drawable/cart"
+                    android:id="@+id/imageView23"
+                    android:layout_width="41dp"
+                    android:layout_height="80dp" />
+
+                <ImageView
                     android:layout_width="80dp"
-                    app:srcCompat="@drawable/ikeman1"
+                    app:srcCompat="@drawable/otoyashikaku"
+                    android:id="@+id/imageView231"
+                    android:layout_height="80dp" />
+
+
+                <TextView
+                    android:text="どうしていいかわからないくらい、君が大事だよ。これからも俺と一緒に居てくれる？"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:id="@+id/textView431"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    app:srcCompat="@drawable/play"
+                    android:id="@+id/imageView23"
+                    android:layout_width="41dp"
+                    android:layout_height="80dp" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    app:srcCompat="@drawable/otoyashikaku"
+                    android:id="@+id/imageView231"
+                    android:layout_height="80dp" />
+
+
+                <TextView
+                    android:text="お前とこうして過ごす時間が好きだ。お前が居てくれるだけで俺は幸せなんだ。
+"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:id="@+id/textView432"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    app:srcCompat="@drawable/cart"
+                    android:id="@+id/imageView23"
+                    android:layout_width="41dp"
+                    android:layout_height="80dp" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    app:srcCompat="@drawable/otoyashikaku"
+                    android:id="@+id/imageView231"
+                    android:layout_height="80dp" />
+
+
+                <TextView
+                    android:text="どんなときだって、私は君の味方です。それだけは覚えておいてくださいね。"
+                    android:layout_width="276dp"
+                    android:layout_height="39dp"
+                    android:id="@+id/textView4322"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    app:srcCompat="@drawable/cart"
+                    android:id="@+id/imageView23"
+                    android:layout_width="41dp"
+                    android:layout_height="80dp" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    app:srcCompat="@drawable/otoyashikaku"
                     android:id="@+id/imageView231"
                     android:layout_height="80dp" />
 
                 <TextView
-                    android:text="text2"
+                    android:text="ずっと一緒に居るのに、なんでこんなに毎日ドキドキするんだろうな。そのくらいお前のことが好きだ。"
                     android:layout_width="276dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/textView431" />
+                    android:layout_height="56dp"
+                    android:id="@+id/textView4323"
+                    android:layout_gravity="center_vertical"/>
+
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -85,35 +183,23 @@
                 android:weightSum="1">
 
                 <ImageView
-                    app:srcCompat="@drawable/ikeman1"
-                    android:id="@+id/imageView232"
-                    android:layout_height="80dp"
-                    android:layout_width="80dp" />
-
-                <TextView
-                    android:text="Text3"
-                    android:layout_width="276dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/textView432" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:weightSum="1">
+                    app:srcCompat="@drawable/cart"
+                    android:id="@+id/imageView23"
+                    android:layout_width="41dp"
+                    android:layout_height="80dp" />
 
                 <ImageView
-                    app:srcCompat="@drawable/ikeman1"
-                    android:id="@+id/imageView2322"
-                    android:layout_weight="0.88"
                     android:layout_width="80dp"
+                    app:srcCompat="@drawable/otoyashikaku"
+                    android:id="@+id/imageView231"
                     android:layout_height="80dp" />
 
                 <TextView
-                    android:text="Text4"
+                    android:text="もっとあなたのことを知りたい。僕にあなたのことを教えてください。僕はワガママですか？"
                     android:layout_width="276dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/textView4322" />
+                    android:layout_height="47dp"
+                    android:id="@+id/textView4322"
+                    android:layout_gravity="center_vertical"/>
             </LinearLayout>
         </LinearLayout>
 
