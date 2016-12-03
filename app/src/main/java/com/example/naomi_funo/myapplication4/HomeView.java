@@ -29,6 +29,8 @@ import android.widget.SeekBar;
 import java.io.IOException;
 
 import static android.support.v7.app.AlertDialog.*;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 
 public class HomeView extends Fragment {
 
@@ -61,16 +63,20 @@ public class HomeView extends Fragment {
         final ImageView imageBlack = (ImageView) view.findViewById(R.id.imageBlack);
         final ImageView getCoin = (ImageView) view.findViewById(R.id.getCoin);
 
+        // 4秒後にコイン獲得画面起動！！
         showGetCoin = new Runnable() {
             @Override
             public void run() {
                 //ここに実行したい処理を記述
                 imageBlack.setVisibility(View.VISIBLE);
                 getCoin.setVisibility(View.VISIBLE);
+                GlideDrawableImageViewTarget target = new GlideDrawableImageViewTarget(getCoin);
+                Glide.with(HomeView.this).load(R.drawable.get_coinf).into(target);
             }
         };
         mHandler.postDelayed(showGetCoin, 4000);
 
+        // 6秒後にコイン獲得画面非表示
         hideGetCoin = new Runnable() {
             @Override
             public void run() {
@@ -79,8 +85,7 @@ public class HomeView extends Fragment {
                 getCoin.setVisibility(View.INVISIBLE);
             }
         };
-        mHandler.postDelayed(hideGetCoin, 6000);
-
+        mHandler.postDelayed(hideGetCoin, 7000);
 
         final ImageView imageOtoya = (ImageView) view.findViewById(R.id.imageOtoya);
 
