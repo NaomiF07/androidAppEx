@@ -25,6 +25,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 import java.io.IOException;
 
@@ -65,6 +66,12 @@ public class HomeView extends Fragment {
         final ImageView cart = (ImageView) view.findViewById(R.id.cart);
         final ImageView point = (ImageView) view.findViewById(R.id.imagePoint);
 
+        // 10ポイント獲得
+        final TextView getConinText = (TextView) view.findViewById(R.id.textCoinGet);
+
+        // 現在コイン枚数
+        final TextView coinNow = (TextView)view.findViewById(R.id.textCoinNow);
+
         // 4秒後にコイン獲得画面起動！！
         showGetCoin = new Runnable() {
             @Override
@@ -72,10 +79,12 @@ public class HomeView extends Fragment {
                 // コイン画面出現
                 imageBlack.setVisibility(View.VISIBLE);
                 getCoin.setVisibility(View.VISIBLE);
+                getConinText.setVisibility(View.VISIBLE);
+                Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.touch);
+                getConinText.startAnimation(animation);
 
                 // カートとポイント画像を非表示
                 cart.setVisibility(View.INVISIBLE);
-                point.setVisibility(View.INVISIBLE);
 
                 GlideDrawableImageViewTarget target = new GlideDrawableImageViewTarget(getCoin);
                 Glide.with(HomeView.this).load(R.drawable.get_coinf).into(target);
@@ -90,10 +99,16 @@ public class HomeView extends Fragment {
                 //ここに実行したい処理を記述
                 imageBlack.setVisibility(View.INVISIBLE);
                 getCoin.setVisibility(View.INVISIBLE);
+                getConinText.setVisibility(View.INVISIBLE);
 
                 // カートとポイント画像を表示
                 cart.setVisibility(View.VISIBLE);
-                point.setVisibility(View.VISIBLE);
+
+                coinNow.setText("62");
+                // コイン強調表示
+                Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.touch);
+                coinNow.startAnimation(animation);
+
             }
         };
         mHandler.postDelayed(hideGetCoin, 7000);
