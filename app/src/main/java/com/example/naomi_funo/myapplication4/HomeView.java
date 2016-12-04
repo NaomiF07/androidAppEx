@@ -10,11 +10,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.Visibility;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,21 +29,67 @@ import android.widget.SeekBar;
 import java.io.IOException;
 
 import static android.support.v7.app.AlertDialog.*;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 
 public class HomeView extends Fragment {
 
     private Button button_shop;
     MediaPlayer mp = null;
-
+    private Runnable showGetCoin;
+    private Runnable hideGetCoin;
+    private Handler mHandler = new Handler();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.home_tab, container, false);
 
-        mp = MediaPlayer.create(view.getContext(), R.raw.sound1);
+        // アプリ起動時の音声再生
+        mp = MediaPlayer.create(view.getContext(), R.raw.voice2);
+        if(mp.isPlaying()){
+            mp.stop();
+            try{
+                mp.prepare();
+            }catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
+        else{
+            mp.start();
+        }
+
+        final ImageView imageBlack = (ImageView) view.findViewById(R.id.imageBlack);
+        final ImageView getCoin = (ImageView) view.findViewById(R.id.getCoin);
+
+        // 4秒後にコイン獲得画面起動！！
+        showGetCoin = new Runnable() {
+            @Override
+            public void run() {
+                //ここに実行したい処理を記述
+                imageBlack.setVisibility(View.VISIBLE);
+                getCoin.setVisibility(View.VISIBLE);
+                GlideDrawableImageViewTarget target = new GlideDrawableImageViewTarget(getCoin);
+                Glide.with(HomeView.this).load(R.drawable.get_coinf).into(target);
+            }
+        };
+        mHandler.postDelayed(showGetCoin, 4000);
+
+        // 6秒後にコイン獲得画面非表示
+        hideGetCoin = new Runnable() {
+            @Override
+            public void run() {
+                //ここに実行したい処理を記述
+                imageBlack.setVisibility(View.INVISIBLE);
+                getCoin.setVisibility(View.INVISIBLE);
+            }
+        };
+        mHandler.postDelayed(hideGetCoin, 7000);
 
         final ImageView imageOtoya = (ImageView) view.findViewById(R.id.imageOtoya);
+
+        // おとやクリック時の挙動
         imageOtoya.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,53 +133,9 @@ public class HomeView extends Fragment {
         // ドラえもん歩く用
         final ImageView img_otoy = (ImageView)view.findViewById(R.id.imageOtoya);
 
-//        SeekBar seekBar = (SeekBar)view.findViewById(R.id.seekBarGrowUp);
-//        seekBar.setMax(80);
-//        seekBar.setProgress(80);
-//        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-//
-//            // つまみを離したときに発生する.
-//            @Override
-//            public void onStopTrackingTouch(SeekBar seekBar) {
-//            }
-//
-//            // つまみにタッチしたときに発生する.
-//            @Override
-//            public void onStartTrackingTouch(SeekBar seekBar) {
-//            }
-//
-//            // つまみを移動したときに発生する.
-//            @Override
-//            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-//                if(0 <= progress && progress <= 10){
-//                    draemonImg.setImageResource(R.drawable.draemon1);
-//                }
-//                if(11 <= progress && progress <= 20){
-//                    draemonImg.setImageResource(R.drawable.draemon2);
-//                }
-//                if(21 <= progress && progress <= 30){
-//                    draemonImg.setImageResource(R.drawable.draemon3);
-//                }
-//                if(31 <= progress && progress <= 40){
-//                    draemonImg.setImageResource(R.drawable.draemon4);
-//                }
-//                if(41 <= progress && progress <= 50){
-//                    draemonImg.setImageResource(R.drawable.draemon5);
-//                }
-//                if(51 <= progress && progress <= 60){
-//                    draemonImg.setImageResource(R.drawable.draemon6);
-//                }
-//                if(61 <= progress && progress <= 70){
-//                    draemonImg.setImageResource(R.drawable.draemon7);
-//                }
-//                if(71 <= progress && progress <= 80){
-//                    draemonImg.setImageResource(R.drawable.draemon1);
-//                }
-//            }
-//        });
-
         return view;
     }
+
 
     // ダイアログ用クラス
     public static class TestDialogFragment extends DialogFragment {
