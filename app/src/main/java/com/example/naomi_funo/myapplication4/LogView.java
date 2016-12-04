@@ -20,6 +20,7 @@ import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.components.XAxis.XAxisPosition;
 
 public class LogView extends Fragment {
 
@@ -53,18 +54,25 @@ public class LogView extends Fragment {
         mlineChart = (LineChart) view.findViewById(R.id.line_chart);
         setData();
         mlineChart.setDrawGridBackground(true);
-        mlineChart.setGridBackgroundColor(Color.rgb(255, 255, 180));
-
+        mlineChart.setGridBackgroundColor(Color.rgb(254, 244, 244));
+        mlineChart.getAxisRight().setEnabled(false);
+        mlineChart.getXAxis().setPosition(XAxisPosition.BOTTOM);
         return view;
     }
 
     private ArrayList<Entry> setYAxisValues(){
         ArrayList<Entry> yVals = new ArrayList<Entry>();
-        yVals.add(new Entry(0, 60));
-        yVals.add(new Entry(1, 48));
-        yVals.add(new Entry(2,70.5f));
-        yVals.add(new Entry(3, 100));
-        yVals.add(new Entry(4, 180.9f));
+        yVals.add(new Entry(0, 0));
+        yVals.add(new Entry(1, 35));
+        yVals.add(new Entry(2, 100));
+        yVals.add(new Entry(3, 150));
+        yVals.add(new Entry(4, 80));
+        yVals.add(new Entry(5, 30));
+        yVals.add(new Entry(6, 200));
+        yVals.add(new Entry(7, 370));
+        yVals.add(new Entry(8, 300));
+        yVals.add(new Entry(9, 200));
+        yVals.add(new Entry(10, 170));
 
         return yVals;
     }
@@ -94,6 +102,10 @@ public class LogView extends Fragment {
 //        // create a data object with the datasets
 //        LineData data = new LineData(xVals, dataSets);
         LineDataSet dataSet = new LineDataSet(yVals, "歩数");
+        dataSet.setColor(Color.rgb(67, 135, 233));
+        dataSet.setDrawValues(false);
+        dataSet.setLineWidth(2.5f);
+        dataSet.setDrawFilled(true);
         LineData lineData = new LineData(dataSet);
 
         // set data
