@@ -115,7 +115,7 @@
                     android:text="お前とこうして過ごす時間が好きだ。お前が居てくれるだけで俺は幸せなんだ。
 "
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
+                    android:layout_height="50dp"
                     android:id="@+id/text3"
                     android:layout_gravity="center_vertical"/>
             </LinearLayout>
@@ -141,7 +141,7 @@
 
                 <TextView
                     android:text="どんなときだって、私は君の味方です。それだけは覚えておいてくださいね。"
-                    android:layout_width="276dp"
+                    android:layout_width="match_parent"
                     android:layout_height="39dp"
                     android:id="@+id/text4"
                     android:layout_gravity="center_vertical"/>
@@ -167,7 +167,7 @@
 
                 <TextView
                     android:text="ずっと一緒に居るのに、なんでこんなに毎日ドキドキするんだろうな。そのくらいお前のことが好きだ。"
-                    android:layout_width="276dp"
+                    android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:id="@+id/text5"
                     android:layout_gravity="center_vertical"/>
@@ -193,8 +193,8 @@
 
                 <TextView
                     android:text="もっとあなたのことを知りたい。僕にあなたのことを教えてください。僕はワガママですか？"
-                    android:layout_width="276dp"
-                    android:layout_height="47dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:id="@+id/text6"
                     android:layout_gravity="center_vertical"/>
             </LinearLayout>
@@ -247,7 +247,7 @@
 
                 <TextView
                     android:text="どんなときだって、私は君の味方です。それだけは覚えておいてくださいね。"
-                    android:layout_width="276dp"
+                    android:layout_width="match_parent"
                     android:layout_height="39dp"
                     android:id="@+id/text8"
                     android:layout_gravity="center_vertical"/>
