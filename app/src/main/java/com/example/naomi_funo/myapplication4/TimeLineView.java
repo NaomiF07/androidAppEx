@@ -35,7 +35,7 @@ public class TimeLineView extends Fragment {
         voice1 = MediaPlayer.create(view.getContext(), R.raw.voice1);
         voice2 = MediaPlayer.create(view.getContext(), R.raw.voice2);
         voice3 = MediaPlayer.create(view.getContext(), R.raw.voice3);
-        voice4 = MediaPlayer.create(view.getContext(), R.raw.voice1);
+        voice4 = MediaPlayer.create(view.getContext(), R.raw.otsukaresama);
 
         /*
         * イケメン1
