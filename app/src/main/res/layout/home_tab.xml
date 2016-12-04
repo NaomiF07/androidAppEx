@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView6"
         android:textSize="30sp"
-        android:layout_alignBottom="@+id/imageView6"
+        android:layout_alignBottom="@+id/imagePoint"
         android:layout_alignRight="@+id/cart"
         android:layout_alignEnd="@+id/cart" />
     <FrameLayout
@@ -21,8 +21,8 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             app:srcCompat="@drawable/otoya"
             android:id="@+id/imageOtoya"
             android:layout_below="@+id/textView7"
@@ -53,7 +53,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         app:srcCompat="@drawable/coin"
-        android:id="@+id/imageView6"
+        android:id="@+id/imagePoint"
         android:layout_alignParentTop="true"
         android:layout_toLeftOf="@+id/textView6"
         android:layout_toStartOf="@+id/textView6" />

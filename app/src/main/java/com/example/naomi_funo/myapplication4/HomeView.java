@@ -62,14 +62,21 @@ public class HomeView extends Fragment {
 
         final ImageView imageBlack = (ImageView) view.findViewById(R.id.imageBlack);
         final ImageView getCoin = (ImageView) view.findViewById(R.id.getCoin);
+        final ImageView cart = (ImageView) view.findViewById(R.id.cart);
+        final ImageView point = (ImageView) view.findViewById(R.id.imagePoint);
 
         // 4秒後にコイン獲得画面起動！！
         showGetCoin = new Runnable() {
             @Override
             public void run() {
-                //ここに実行したい処理を記述
+                // コイン画面出現
                 imageBlack.setVisibility(View.VISIBLE);
                 getCoin.setVisibility(View.VISIBLE);
+
+                // カートとポイント画像を非表示
+                cart.setVisibility(View.INVISIBLE);
+                point.setVisibility(View.INVISIBLE);
+
                 GlideDrawableImageViewTarget target = new GlideDrawableImageViewTarget(getCoin);
                 Glide.with(HomeView.this).load(R.drawable.get_coinf).into(target);
             }
@@ -83,6 +90,10 @@ public class HomeView extends Fragment {
                 //ここに実行したい処理を記述
                 imageBlack.setVisibility(View.INVISIBLE);
                 getCoin.setVisibility(View.INVISIBLE);
+
+                // カートとポイント画像を表示
+                cart.setVisibility(View.VISIBLE);
+                point.setVisibility(View.VISIBLE);
             }
         };
         mHandler.postDelayed(hideGetCoin, 7000);
@@ -114,7 +125,7 @@ public class HomeView extends Fragment {
         });
 
 
-        final ImageView cart = (ImageView) view.findViewById(R.id.cart);
+        // cart
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -130,7 +141,7 @@ public class HomeView extends Fragment {
 
 
 
-        // ドラえもん歩く用
+        // おとや
         final ImageView img_otoy = (ImageView)view.findViewById(R.id.imageOtoya);
 
         return view;
