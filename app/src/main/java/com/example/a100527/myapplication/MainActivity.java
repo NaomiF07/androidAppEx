@@ -16,27 +16,27 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
 try {
-    TabHost tabHost = (TabHost) findViewById(android.R.id.tabhost);
+    TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
     tabHost.setup();
     TabHost.TabSpec spec;
 
     // tab1
 
-    spec = tabHost.newTabSpec("main")
-            .setIndicator("main")
-            .setContent(R.layout.activity_main);
-    tabHost.addTab(spec);
-
     spec = tabHost.newTabSpec("left")
             .setIndicator("left")
-            .setContent(R.layout.right_page);
+            .setContent(R.id.left);
+    tabHost.addTab(spec);
+
+    spec = tabHost.newTabSpec("main")
+            .setIndicator("main")
+            .setContent(R.id.main);
     tabHost.addTab(spec);
 
     spec = tabHost.newTabSpec("right")
             .setIndicator("right")
-            .setContent(R.layout.left_page);
+            .setContent(R.id.right);
     tabHost.addTab(spec);
-    tabHost.setCurrentTab(0);
+    tabHost.setCurrentTab(1);
 } catch (RuntimeException e) {
     e.printStackTrace();
 }
