@@ -17,6 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".LeftActivity"></activity>
+        <activity android:name=".MypageActivity"></activity>
+        <activity android:name=".HomeActivity"></activity>
         <activity android:name=".right_page"></activity>
     </application>
 

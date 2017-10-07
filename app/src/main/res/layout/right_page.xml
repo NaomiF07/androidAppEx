@@ -1,73 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/yado_caunta"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/yado_caunta"
     tools:context="com.example.a100527.myapplication.right_page">
 
-   <!--
-    <TabHost
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/tabHost2"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <!--
+     <TabHost
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:id="@+id/tabHost2"
+         tools:layout_constraintTop_creator="1"
+         tools:layout_constraintRight_creator="1"
+         app:layout_constraintRight_toRightOf="parent"
+         tools:layout_constraintLeft_creator="1"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical">
 
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+             <TabWidget
+                 android:id="@android:id/tabs"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent" />
 
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+             <FrameLayout
+                 android:id="@android:id/tabcontent"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:id="@+id/cars"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                 <LinearLayout
+                     android:id="@+id/cars"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:orientation="vertical">
 
-                    <include
-                        layout="@layout/car"
-                        android:layout_width="485dp"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
+                     <include
+                         layout="@layout/car"
+                         android:layout_width="485dp"
+                         android:layout_height="wrap_content" />
+                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/beds"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                 <LinearLayout
+                     android:id="@+id/beds"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:orientation="vertical">
 
-                </LinearLayout>
+                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/bookshelves"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                 <LinearLayout
+                     android:id="@+id/bookshelves"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:orientation="vertical">
 
-                </LinearLayout>
+                 </LinearLayout>
 
-            </FrameLayout>
-        </LinearLayout>
-    </TabHost>
--->
+             </FrameLayout>
+         </LinearLayout>
+     </TabHost>
+ -->
 
     <!--
     <LinearLayout
@@ -191,43 +190,40 @@
         </LinearLayout>
 -->
 
-    <FrameLayout
-        android:layout_width="116dp"
-        android:layout_height="109dp"
-        tools:layout_editor_absoluteX="121dp"
-        tools:layout_editor_absoluteY="3dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/car" />
-    </FrameLayout>
+            android:orientation="horizontal">
 
-    <FrameLayout
-        android:layout_width="116dp"
-        android:layout_height="109dp"
-        tools:layout_editor_absoluteX="237dp"
-        tools:layout_editor_absoluteY="3dp">
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/car" />
 
-        <ImageButton
-            android:id="@+id/imageButton5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/bed" />
-    </FrameLayout>
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bed" />
 
-    <FrameLayout
-        android:layout_width="116dp"
-        android:layout_height="109dp"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="1dp">
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shelves" />
+        </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/imageButton6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/shelves" />
-    </FrameLayout>
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/ConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

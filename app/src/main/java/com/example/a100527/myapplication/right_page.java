@@ -3,6 +3,8 @@ package com.example.a100527.myapplication;
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
+import android.view.View;
 import android.widget.TabHost;
 
 public class right_page extends Activity {
@@ -11,6 +13,20 @@ public class right_page extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.right_page);
+
+        findViewById(R.id.imageButton4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // コンテンツ部分のLayoutを取ってくる
+                ConstraintLayout layout = (ConstraintLayout)findViewById(R.id.ConstraintLayout);
+
+                // 内容を全部消す
+                layout.removeAllViews();
+
+                // car.xmlに変更する
+                getLayoutInflater().inflate(R.layout.car, layout);
+            }
+        });
 /*
         try {
             TabHost tabHost = (TabHost) findViewById(R.id.tabHost2);

@@ -30,14 +30,16 @@ public class MainActivity extends ActivityGroup {
                     .setContent(intent);
             tabHost.addTab(spec);
 
+            intent = new Intent().setClass(this, MypageActivity.class);
             spec = tabHost.newTabSpec("mypage")
                     .setIndicator("mypage")
-                    .setContent(R.id.mypage);
+                    .setContent(intent);
             tabHost.addTab(spec);
 
+            intent = new Intent().setClass(this, HomeActivity.class);
             spec = tabHost.newTabSpec("home")
                     .setIndicator("home")
-                    .setContent(R.id.home);
+                    .setContent(intent);
             tabHost.addTab(spec);
 
             intent = new Intent().setClass(this, right_page.class);
@@ -52,6 +54,7 @@ public class MainActivity extends ActivityGroup {
             tabHost.addTab(spec);
 
             tabHost.setCurrentTab(2);
+
         } catch (RuntimeException e) {
             e.printStackTrace();
         }
