@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="bmw">BMW
+        2000 G</string>
+    <string name="family">ファミリーカー
+        1000G</string>
+    <string name="matsuda">マツダ
+    500 G</string>
+    <string name="buy">購入する</string>
+
 </resources>
