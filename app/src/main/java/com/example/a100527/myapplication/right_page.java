@@ -11,7 +11,7 @@ public class right_page extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.right_page);
-
+/*
         try {
             TabHost tabHost = (TabHost) findViewById(R.id.tabHost2);
             tabHost.setup();
@@ -37,6 +37,7 @@ public class right_page extends Activity {
         } catch (RuntimeException e) {
             e.printStackTrace();
         }
+        */
     }
 
 }

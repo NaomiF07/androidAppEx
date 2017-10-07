@@ -40,9 +40,10 @@ public class MainActivity extends ActivityGroup {
                     .setContent(R.id.home);
             tabHost.addTab(spec);
 
+            intent = new Intent().setClass(this, right_page.class);
             spec = tabHost.newTabSpec("right")
                     .setIndicator("right")
-                    .setContent(R.id.right);
+                    .setContent(intent);
             tabHost.addTab(spec);
 
             spec = tabHost.newTabSpec("setting")

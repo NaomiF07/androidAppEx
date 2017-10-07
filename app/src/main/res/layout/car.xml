@@ -42,7 +42,7 @@
                 android:layout_height="99dp"
                 android:layout_marginStart="10dp"
                 android:contentDescription="@drawable/family"
-                app:srcCompat="@drawable/family" />
+                android:src="@drawable/family" />
 
             <TextView
                 android:id="@+id/textView1"
@@ -76,7 +76,7 @@
                 android:layout_height="99dp"
                 android:layout_marginStart="10dp"
                 android:contentDescription="@drawable/bmw"
-                app:srcCompat="@drawable/bmw" />
+                android:src="@drawable/bmw" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -113,7 +113,7 @@
                 android:layout_height="99dp"
                 android:layout_marginStart="10dp"
                 android:contentDescription="@drawable/matsuda"
-                app:srcCompat="@drawable/matsuda" />
+                android:src="@drawable/matsuda" />
 
             <TextView
                 android:id="@+id/textView3"
