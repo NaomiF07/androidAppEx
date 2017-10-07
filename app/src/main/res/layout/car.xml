@@ -8,63 +8,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.a100527.myapplication.right_page">
 
-    <TabHost
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/tabHost2"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:id="@+id/cars"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <include
-                        layout="@layout/car"
-                        android:layout_width="485dp"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/beds"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/bookshelves"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                </LinearLayout>
-
-            </FrameLayout>
-        </LinearLayout>
-    </TabHost>
 
     <LinearLayout
         android:layout_width="0dp"
@@ -72,16 +16,18 @@
         android:background="@drawable/shelf"
         android:orientation="vertical"
         android:weightSum="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabHost2"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1">
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -95,12 +41,13 @@
                 android:layout_width="128dp"
                 android:layout_height="99dp"
                 android:layout_marginStart="10dp"
-                android:src="@drawable/family" />
+                android:contentDescription="@drawable/family"
+                app:srcCompat="@drawable/family" />
 
             <TextView
                 android:id="@+id/textView1"
-                android:layout_width="54dp"
-                android:layout_height="wrap_content"
+                android:layout_width="56dp"
+                android:layout_height="71dp"
                 android:layout_marginStart="40dp"
                 android:text="@string/family"
                 android:textColor="#FFFFFF"
@@ -128,7 +75,8 @@
                 android:layout_width="128dp"
                 android:layout_height="99dp"
                 android:layout_marginStart="10dp"
-                android:src="@drawable/bmw" />
+                android:contentDescription="@drawable/bmw"
+                app:srcCompat="@drawable/bmw" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -164,7 +112,8 @@
                 android:layout_width="128dp"
                 android:layout_height="99dp"
                 android:layout_marginStart="10dp"
-                android:src="@drawable/matsuda" />
+                android:contentDescription="@drawable/matsuda"
+                app:srcCompat="@drawable/matsuda" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -185,8 +134,5 @@
                 android:layout_weight="1"
                 android:text="@string/buy" />
         </LinearLayout>
-
-
-    </LinearLayout>
-
+</LinearLayout>
 </android.support.constraint.ConstraintLayout>
