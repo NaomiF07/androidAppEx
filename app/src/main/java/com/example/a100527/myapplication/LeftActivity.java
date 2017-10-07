@@ -12,22 +12,20 @@ import android.widget.TextView;
 
 public class LeftActivity extends Activity {
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState){
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.left_page);
 
-            TextView textView = (TextView) findViewById(R.id.editText);
-            textView.setTypeface(Typeface.DEFAULT_BOLD);
+        TextView textView = (TextView) findViewById(R.id.editText);
+        textView.setTypeface(Typeface.DEFAULT_BOLD);
 
-            findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    // クリック時の処理
-                    setContentView(R.layout.right_page);
-                }
-            });
-
+        findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // クリック時の処理
+                setContentView(R.layout.battle_page);
+            }
+        });
     }
-
-    }
+}
