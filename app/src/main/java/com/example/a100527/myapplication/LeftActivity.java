@@ -19,13 +19,13 @@ public class LeftActivity extends Activity {
 
         TextView textView = (TextView) findViewById(R.id.editText);
         textView.setTypeface(Typeface.DEFAULT_BOLD);
+    }
 
-        findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // クリック時の処理
-                setContentView(R.layout.battle_page);
-            }
-        });
+    protected  void ToBattle(View view){
+        setContentView(R.layout.battle_page);
+    }
+
+    protected void Onback(View view){
+        setContentView(R.layout.left_page);
     }
 }
