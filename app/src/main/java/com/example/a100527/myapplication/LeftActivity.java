@@ -19,19 +19,19 @@ public class LeftActivity extends Activity {
         setContentView(R.layout.left_page);
     }
 
-    protected void ToBattle(View view){
+    public void ToBattle(View view){
         setContentView(R.layout.battle_page);
     }
 
-    protected void Onback(View view){
+    public void Onback(View view){
         setContentView(R.layout.left_page);
     }
 
-    protected void ToKeijibann(View view){
+    public void ToKeijibann(View view){
         setContentView(R.layout.keijibann);
     }
 
-    protected void ToPoint(View view){
+    public void ToPoint(View view){
         setContentView(R.layout.point_get);
         TextView point = (TextView) findViewById(R.id.point);
         point.setText("25");

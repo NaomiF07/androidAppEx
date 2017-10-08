@@ -20,25 +20,25 @@ public class MainActivity extends ActivityGroup {
 
             intent = new Intent().setClass(this, LeftActivity.class);
             spec = tabHost.newTabSpec("left")
-                    .setIndicator("left")
+                    .setIndicator("guild")
                     .setContent(intent);
             tabHost.addTab(spec);
 
             intent = new Intent().setClass(this, MypageActivity.class);
             spec = tabHost.newTabSpec("mypage")
                     .setIndicator("mypage")
-                    .setContent(R.id.mypage);
+                    .setContent(intent);
             tabHost.addTab(spec);
 
             intent = new Intent().setClass(this, HomeActivity.class);
             spec = tabHost.newTabSpec("home")
                     .setIndicator("home")
-                    .setContent(R.id.home);
+                    .setContent(intent);
             tabHost.addTab(spec);
 
             intent = new Intent().setClass(this, RightActivity.class);
             spec = tabHost.newTabSpec("right")
-                    .setIndicator("right")
+                    .setIndicator("shop")
                     .setContent(intent);
             tabHost.addTab(spec);
 

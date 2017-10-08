@@ -13,7 +13,7 @@ public class RightActivity extends Activity {
         setContentView(R.layout.right_page);
     }
 
-    protected void clickbutton4(View view){
+    public void clickbutton4(View view){
         // コンテンツ部分のLayoutを取ってくる
         ConstraintLayout layout = (ConstraintLayout)findViewById(R.id.ConstraintLayout);
 
@@ -24,7 +24,7 @@ public class RightActivity extends Activity {
         getLayoutInflater().inflate(R.layout.car, layout);
     }
 
-    protected void clickbutton5(View view){
+    public void clickbutton5(View view){
         // コンテンツ部分のLayoutを取ってくる
         ConstraintLayout layout = (ConstraintLayout)findViewById(R.id.ConstraintLayout);
 
