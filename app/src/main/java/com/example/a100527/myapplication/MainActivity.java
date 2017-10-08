@@ -22,8 +22,6 @@ public class MainActivity extends ActivityGroup {
             TabHost.TabSpec spec;
             Intent intent;
 
-            // tab1
-
             intent = new Intent().setClass(this, LeftActivity.class);
             spec = tabHost.newTabSpec("left")
                     .setIndicator("left")

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a100527.myapplication.MainActivity"
+    android:scaleType="fitXY"
+    android:background="@drawable/rennga"
+
+    >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="40dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="62dp"
+            android:src="@drawable/hukuro"
+            android:paddingTop="40dp"
+            android:scaleType="centerCrop"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <TextView
+            android:id="@+id/editText1"
+            android:layout_marginStart="75dp"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:textSize="30sp"
+            android:textColor="#000000"
+            android:gravity="left|bottom"
+            android:inputType="textPersonName"
+            android:text="朝７時までに起きた" />
+
+        <TextView
+            android:id="@+id/editText2"
+            android:layout_marginStart="75dp"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:textSize="30sp"
+            android:textColor="#000000"
+            android:gravity="left|bottom"
+            android:inputType="textPersonName"
+            android:text="１日３食食べた" />
+
+        <TextView
+            android:id="@+id/editText3"
+            android:layout_marginStart="75dp"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:textSize="30sp"
+            android:textColor="#000000"
+            android:gravity="left|bottom"
+            android:inputType="textPersonName"
+            android:text="5000歩以上歩いた" />
+
+        <TextView
+            android:id="@+id/editText4"
+            android:layout_marginStart="75dp"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:textSize="30sp"
+            android:textColor="#000000"
+            android:gravity="left|bottom"
+            android:inputType="textPersonName"
+            android:text="階段を使った" />
+
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+
+        <TextView
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="18dp"
+            android:ems="10"
+            android:background="@drawable/mokume"
+            android:textSize="50sp"
+            android:textColor="#ebffbc"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:text="MISSION" />
+
+
+        <TextView
+          android:id="@+id/point"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/kabe"
+            android:textSize="34dp"
+            android:gravity="center"
+            android:textColor="#0000aa"
+
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+        <CheckBox
+            android:id="@+id/checkbox1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/akkk"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="50dp"
+            android:onClick="onCheckboxClicked"
+            android:scaleType="centerCrop"
+
+            />
+        <CheckBox
+            android:id="@+id/checkbox2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/akkk"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="20dp"
+            android:onClick="onCheckboxClicked"
+            android:scaleType="centerCrop"
+
+            />
+        <CheckBox
+            android:id="@+id/checkbox3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/akkk"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="20dp"
+            android:onClick="onCheckboxClicked"
+            android:scaleType="centerCrop"
+
+            />
+        <CheckBox
+            android:id="@+id/checkbox4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/akkk"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="20dp"
+            android:onClick="onCheckboxClicked"
+            android:scaleType="centerCrop"
+
+            />
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
