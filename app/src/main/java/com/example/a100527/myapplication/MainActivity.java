@@ -1,12 +1,8 @@
 package com.example.a100527.myapplication;
 
-import android.content.Context;
 import android.content.Intent;
-import android.support.v4.content.ContextCompat;
 import android.os.Bundle;
 import android.widget.TabHost;
-import android.view.Menu;
-import android.app.Activity;
 import android.app.ActivityGroup;
 
 public class MainActivity extends ActivityGroup {
@@ -31,16 +27,16 @@ public class MainActivity extends ActivityGroup {
             intent = new Intent().setClass(this, MypageActivity.class);
             spec = tabHost.newTabSpec("mypage")
                     .setIndicator("mypage")
-                    .setContent(intent);
+                    .setContent(R.id.mypage);
             tabHost.addTab(spec);
 
             intent = new Intent().setClass(this, HomeActivity.class);
             spec = tabHost.newTabSpec("home")
                     .setIndicator("home")
-                    .setContent(intent);
+                    .setContent(R.id.home);
             tabHost.addTab(spec);
 
-            intent = new Intent().setClass(this, right_page.class);
+            intent = new Intent().setClass(this, RightActivity.class);
             spec = tabHost.newTabSpec("right")
                     .setIndicator("right")
                     .setContent(intent);

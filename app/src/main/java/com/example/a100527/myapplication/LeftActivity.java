@@ -17,35 +17,24 @@ public class LeftActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.left_page);
-
-        TextView textView = (TextView) findViewById(R.id.editText);
-        textView.setTypeface(Typeface.DEFAULT_BOLD);
-
-        findViewById(R.id.button5).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // クリック時の処理
-                setContentView(R.layout.keijibann);
-            }
-        });
-        findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // クリック時の処理
-                setContentView(R.layout.point_get);
-
-                TextView point = (TextView) findViewById(R.id.point);
-                point.setText("25");
-            }
-        });
     }
 
-    protected  void ToBattle(View view){
+    protected void ToBattle(View view){
         setContentView(R.layout.battle_page);
     }
 
     protected void Onback(View view){
         setContentView(R.layout.left_page);
+    }
+
+    protected void ToKeijibann(View view){
+        setContentView(R.layout.keijibann);
+    }
+
+    protected void ToPoint(View view){
+        setContentView(R.layout.point_get);
+        TextView point = (TextView) findViewById(R.id.point);
+        point.setText("25");
     }
 
     public void onCheckboxClicked(View view) {

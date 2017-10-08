@@ -16,10 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LeftActivity"></activity>
-        <activity android:name=".HomeActivity"></activity>
-        <activity android:name=".right_page"></activity>
-        <activity android:name=".PointActivity"></activity>
+        <activity android:name=".LeftActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".MypageActivity" />
+        <activity android:name=".RightActivity" />
+        <activity android:name=".PointActivity" />
     </application>
 
 </manifest>

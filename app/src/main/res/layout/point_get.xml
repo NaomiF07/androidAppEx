@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.a100527.myapplication.MainActivity"
     android:scaleType="fitXY"
     android:background="@drawable/rennga"
 
@@ -51,7 +50,6 @@
             android:textSize="30sp"
             android:textColor="#000000"
             android:gravity="left|bottom"
-            android:inputType="textPersonName"
             android:text="朝７時までに起きた" />
 
         <TextView
@@ -64,7 +62,6 @@
             android:textSize="30sp"
             android:textColor="#000000"
             android:gravity="left|bottom"
-            android:inputType="textPersonName"
             android:text="１日３食食べた" />
 
         <TextView
@@ -77,7 +74,6 @@
             android:textSize="30sp"
             android:textColor="#000000"
             android:gravity="left|bottom"
-            android:inputType="textPersonName"
             android:text="5000歩以上歩いた" />
 
         <TextView
@@ -90,7 +86,6 @@
             android:textSize="30sp"
             android:textColor="#000000"
             android:gravity="left|bottom"
-            android:inputType="textPersonName"
             android:text="階段を使った" />
 
 
@@ -126,7 +121,6 @@
             android:textSize="50sp"
             android:textColor="#ebffbc"
             android:gravity="center"
-            android:inputType="textPersonName"
             android:text="MISSION" />
 
 
@@ -138,7 +132,7 @@
             android:layout_marginStart="300dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/kabe"
-            android:textSize="34dp"
+            android:textSize="34sp"
             android:gravity="center"
             android:textColor="#0000aa"
 

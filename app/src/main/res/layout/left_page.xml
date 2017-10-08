@@ -41,8 +41,8 @@
             android:textSize="33sp"
             android:textColor="#4c0105"
             android:gravity="center"
-            android:inputType="textPersonName"
-            android:text="AMATOSE" />
+            android:textStyle="bold"
+            android:text="@string/amatose" />
 
         <ImageButton
             android:id="@+id/button1"
@@ -79,6 +79,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:scaleType="centerCrop"
+            android:onClick="ToKeijibann"
             android:src="@drawable/girudo3"
             />
         <ImageButton
@@ -91,6 +92,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:scaleType="centerCrop"
+            android:onClick="ToPoint"
             android:src="@drawable/hon"
             />
 
