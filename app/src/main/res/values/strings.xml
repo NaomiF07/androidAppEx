@@ -7,5 +7,11 @@
     <string name="matsuda">マツダ
     500 G</string>
     <string name="buy">購入する</string>
+    <string name="bed1">ちょっとショボいベッド
+    200 G</string>
+    <string name="bed2">気持ち良さそうなベッド
+    500 G</string>
+    <string name="bed3">おしゃれなベッド
+    1000 G</string>
 
 </resources>

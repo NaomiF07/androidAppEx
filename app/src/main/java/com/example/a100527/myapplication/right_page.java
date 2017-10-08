@@ -14,6 +14,7 @@ public class right_page extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.right_page);
 
+        /*
         findViewById(R.id.imageButton4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,6 +28,9 @@ public class right_page extends Activity {
                 getLayoutInflater().inflate(R.layout.car, layout);
             }
         });
+*/
+
+
 /*
         try {
             TabHost tabHost = (TabHost) findViewById(R.id.tabHost2);
@@ -54,6 +58,28 @@ public class right_page extends Activity {
             e.printStackTrace();
         }
         */
+    }
+
+    protected void Onclickbutton4(View view){
+        // コンテンツ部分のLayoutを取ってくる
+        ConstraintLayout layout = (ConstraintLayout)findViewById(R.id.ConstraintLayout);
+
+        // 内容を全部消す
+        layout.removeAllViews();
+
+        // car.xmlに変更する
+        getLayoutInflater().inflate(R.layout.car, layout);
+    }
+
+    protected void Onclickbutton5(View view){
+        // コンテンツ部分のLayoutを取ってくる
+        ConstraintLayout layout = (ConstraintLayout)findViewById(R.id.ConstraintLayout);
+
+        // 内容を全部消す
+        layout.removeAllViews();
+
+        // car.xmlに変更する
+        getLayoutInflater().inflate(R.layout.bed, layout);
     }
 
 }
